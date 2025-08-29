@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ resume.name }} - Resume</title>
+    <style>
+        body { font-family: Arial; margin: 40px; align-items: center;}
+        h1 { margin-bottom: 5px; }
+        h2 { margin-top: 20px; border-bottom: 1px solid #ccc; padding-bottom: 5px; }
+        ul { margin: 0; padding-left: 20px; }
+        a { color: #1a73e8; text-decoration: none; }
+    </style>
+</head>
+<body>
+<h1>{{ resume.name }}</h1>
+{% if resume.job_title %}<p><strong>{{ resume.job_title }}</strong></p>{% endif %}
+<p>{{ resume.email }} | {{ resume.mobile }}</p>
+{% if resume.location %}<p>{{ resume.location }}</p>{% endif %}
+
+{% if resume.summary %}
+<h2>Summary</h2>
+<p>{{ resume.summary }}</p>
+{% endif %}
+
+{% if resume.portfolio_links %}
+<h2>Portfolio</h2>
+<ul>{% for link in resume.portfolio_links %}<li><a href="{{ link }}">{{ link }}</a></li>{% endfor %}</ul>
+{% endif %}
+
+{% if resume.other_links %}
+<h2>Other Links</h2>
+<ul>{% for link in resume.other_links %}<li><a href="{{ link }}">{{ link }}</a></li>{% endfor %}</ul>
+{% endif %}
+
+{% if resume.experience %}
+<h2>Experience</h2>
+<ul>{% for item in resume.experience %}<li>{{ item }}</li>{% endfor %}</ul>
+{% endif %}
+
+{% if resume.education %}
+<h2>Education</h2>
+<ul>{% for item in resume.education %}<li>{{ item }}</li>{% endfor %}</ul>
+{% endif %}
+
+{% if resume.projects %}
+<h2>Projects</h2>
+<ul>{% for item in resume.projects %}<li>{{ item }}</li>{% endfor %}</ul>
+{% endif %}
+
+{% if resume.certificates %}
+<h2>Certificates</h2>
+<ul>{% for item in resume.certificates %}<li>{{ item }}</li>{% endfor %}</ul>
+{% endif %}
+</body>
+</html>
