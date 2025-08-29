@@ -26,3 +26,23 @@ Users can enter their details via a web form, preview their resume in HTML, and 
 ---
 
 ## 📂 Project Structure
+resume-generator/
+│── app.py # Main FastAPI app
+│── templates/
+│ ├── form_inputs.html # Input form
+│ └── resume.html # Resume template
+│── README.md
+│── requirements.txt
+
+
+
+## ⚡ Installation & Setup
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/your-username/resume-generator.git
+cd resume-generator
+
+
+## ▶️ Installation & Setup
+uvicorn app:app --reload
