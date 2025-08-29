@@ -40,7 +40,7 @@ resume-generator/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/resume-generator.git
+git clone [https://github.com/your-username/resume-generator.git](https://github.com/jangamvivek/CV-Generator.git)
 cd resume-generator
 
 
